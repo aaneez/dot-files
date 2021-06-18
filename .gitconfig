@@ -1,0 +1,15 @@
+[push]
+	default = simple
+[user]
+	name = aaneez
+	email = aaneez@gmail.com
+[core]
+    excludesfile = ~/.gitignore
+[credential]
+	helper = gcloud.sh
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+
