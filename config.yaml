@@ -1,0 +1,55 @@
+terminal:
+  searchOptions: {}
+  colorScheme:
+    name: Dracula
+    foreground: "#f8f8f2"
+    background: "#1e1f29"
+    cursor: "#bbbbbb"
+    colors:
+      - "#000000"
+      - "#ff5555"
+      - "#50fa7b"
+      - "#f1fa8c"
+      - "#bd93f9"
+      - "#ff79c6"
+      - "#8be9fd"
+      - "#bbbbbb"
+      - "#555555"
+      - "#ff5555"
+      - "#50fa7b"
+      - "#f1fa8c"
+      - "#bd93f9"
+      - "#ff79c6"
+      - "#8be9fd"
+      - "#ffffff"
+  background: colorScheme
+  fontSize: 18
+  environment: {}
+  workingDirectory: ~/Downloads
+  profiles:
+    - name: User default
+      shell: default
+      sessionOptions:
+        command: /usr/local/bin/fish
+        args:
+          - "--login"
+        env: {}
+  alwaysUseWorkingDirectory: false
+  ligatures: false
+  bell: visual
+  profile: user-default
+  recoverTabs: false
+  font: Menlo
+  copyOnSelect: true
+  warnOnMultilinePaste: false
+hotkeys:
+  shell: {}
+  profile: {}
+serial: {}
+ssh: {}
+appearance: {}
+enableAnalytics: false
+enableWelcomeTab: false
+pluginBlacklist:
+  - ssh
+  - serial
