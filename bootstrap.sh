@@ -22,3 +22,8 @@ python_upgrade() {
 	ln -s -f /usr/local/bin/python3.9.4 /usr/local/bin/python
 	pip3 install --upgrade pip
 }
+
+install_direnv() {
+   cp direnvrc ~/.config/direnv/direnvrc
+ }
+
