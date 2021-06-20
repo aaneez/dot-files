@@ -538,7 +538,7 @@
   # Direnv color.
   typeset -g POWERLEVEL9K_DIRENV_FOREGROUND=178
   # Custom icon.
-  # typeset -g POWERLEVEL9K_DIRENV_VISUAL_IDENTIFIER_EXPANSION='⭐'
+  typeset -g POWERLEVEL9K_DIRENV_VISUAL_IDENTIFIER_EXPANSION='⭐'
 
   ###############[ asdf: asdf version manager (https://github.com/asdf-vm/asdf) ]###############
   # Default asdf color. Only used to display tools for which there is no color override (see below).
@@ -1029,9 +1029,9 @@
   # Show java version only when in a java project subdirectory.
   typeset -g POWERLEVEL9K_JAVA_VERSION_PROJECT_ONLY=true
   # Show brief version.
-  typeset -g POWERLEVEL9K_JAVA_VERSION_FULL=false
+  typeset -g POWERLEVEL9K_JAVA_VERSION_FULL=true
   # Custom icon.
-  # typeset -g POWERLEVEL9K_JAVA_VERSION_VISUAL_IDENTIFIER_EXPANSION='⭐'
+  typeset -g POWERLEVEL9K_JAVA_VERSION_VISUAL_IDENTIFIER_EXPANSION='⭐'
 
   ###[ package: name@version from package.json (https://docs.npmjs.com/files/package.json) ]####
   # Package color.
@@ -1094,7 +1094,7 @@
   typeset -g POWERLEVEL9K_JENV_SOURCES=(shell local global)
   # If set to false, hide java version if it's the same as global:
   # $(jenv version-name) == $(jenv global).
-  typeset -g POWERLEVEL9K_JENV_PROMPT_ALWAYS_SHOW=false
+  typeset -g POWERLEVEL9K_JENV_PROMPT_ALWAYS_SHOW=true
   # If set to false, hide java version if it's equal to "system".
   typeset -g POWERLEVEL9K_JENV_SHOW_SYSTEM=true
   # Custom icon.
@@ -1155,7 +1155,7 @@
 
   ################[ terraform: terraform workspace (https://www.terraform.io) ]#################
   # Don't show terraform workspace if it's literally "default".
-  typeset -g POWERLEVEL9K_TERRAFORM_SHOW_DEFAULT=false
+  typeset -g POWERLEVEL9K_TERRAFORM_SHOW_DEFAULT=true
   # POWERLEVEL9K_TERRAFORM_CLASSES is an array with even number of elements. The first element
   # in each pair defines a pattern against which the current terraform workspace gets matched.
   # More specifically, it's P9K_CONTENT prior to the application of context expansion (see below)
@@ -1204,10 +1204,10 @@
   #
   # For example, given these settings:
   #
-  #   typeset -g POWERLEVEL9K_KUBECONTEXT_CLASSES=(
-  #     '*prod*'  PROD
-  #     '*test*'  TEST
-  #     '*'       DEFAULT)
+  typeset -g POWERLEVEL9K_KUBECONTEXT_CLASSES=(
+       '*prod*'  PROD
+       '*test*'  TEST
+       '*'       DEFAULT)
   #
   # If your current kubernetes context is "deathray-testing/default", its class is TEST
   # because "deathray-testing/default" doesn't match the pattern '*prod*' but does match '*test*'.

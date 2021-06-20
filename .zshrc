@@ -20,7 +20,7 @@ eval "$(direnv hook zsh)"
 eval "$(jenv init -)"
 eval "$(pyenv init -)"
 source /usr/local/share/zsh-abbr/zsh-abbr.zsh
-PROMPT='$(kube_ps1)'$PROMPT
+#PROMPT='$(kube_ps1)'$PROMPT
 [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
