@@ -7,3 +7,4 @@ export PATH
 PS1='$PWD>'
 eval "$(pyenv init --path)"
 #Added again
+cd ~/Downloads
