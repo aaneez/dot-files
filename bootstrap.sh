@@ -24,6 +24,8 @@ python_upgrade() {
 }
 
 install_direnv() {
+   echo "copying direnvrc"
    cp direnvrc ~/.config/direnv/direnvrc
  }
 
+install_direnv
