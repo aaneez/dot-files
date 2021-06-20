@@ -33,6 +33,8 @@
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
     os_icon               # os identifier
+    user
+    ssh
     dir                     # current directory
     vcs                     # git status
     # =========================[ Line #2 ]=========================
@@ -75,6 +77,7 @@
     # ram                   # free RAM
     # swap                  # used swap
     time                    # current time
+    date
     # =========================[ Line #2 ]=========================
     newline                 # \n
     # ip                    # ip address and bandwidth usage for a specified network interface
@@ -1516,6 +1519,7 @@
   ####################################[ time: current time ]####################################
   # Current time color.
   typeset -g POWERLEVEL9K_TIME_FOREGROUND=66
+  typeset -g POWERLEVEL9K_DATE_FOREGROUND=32
   # Format for the current time: 09:51:02. See `man 3 strftime`.
   typeset -g POWERLEVEL9K_TIME_FORMAT='%D{%I:%M:%S %p}'
   # If set to true, time will update when you hit enter. This way prompts for the past
