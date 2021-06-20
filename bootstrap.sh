@@ -16,3 +16,9 @@ install_fonts() {
 	git clone https://github.com/powerline/fonts.git --depth=1
 	cd fonts; ./install.sh; cd ..; rm -rf fonts
 }
+
+python_upgrade() {
+	brew install python3
+	ln -s -f /usr/local/bin/python3.9.4 /usr/local/bin/python
+	pip3 install --upgrade pip
+}
