@@ -1,9 +1,5 @@
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '~/google-cloud-sdk/path.fish.inc' ]; 
-    . '~/google-cloud-sdk/path.fish.inc'; 
-end
-
 
 set -g theme_color_scheme dracula
 eval (direnv hook fish)
@@ -42,3 +38,6 @@ set -g theme_display_vagrant yes
 
 
 #test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish ; or true
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '~/google-cloud-sdk/path.fish.inc' ]; . '~/google-cloud-sdk/path.fish.inc'; end

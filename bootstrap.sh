@@ -28,4 +28,9 @@ install_direnv() {
    cp direnvrc ~/.config/direnv/direnvrc
  }
 
+install_powerline_z() {
+	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+    echo ZSH_THEME="powerlevel10k/powerlevel10k" >> ~/.zshrc
+}
+
 install_direnv
