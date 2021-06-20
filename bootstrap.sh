@@ -1,6 +1,6 @@
 #! /bin/bash
 
-if [[ -d  /Users/aaneez/.local/share/omf ]]
+if [[ -d ~/.local/share/omf ]]
 then
 	echo "oh-my-fish already installed"
 else
