@@ -6,6 +6,7 @@ eval (direnv hook fish)
 set -Ux PYENV_ROOT $HOME/.pyenv
 status is-login; and pyenv init --path | source
 pyenv init - | source
+alias rmds='find . -name .DS_Store -exec rm -rf {} \;'
 
 cd ~/Downloads
 
@@ -31,8 +32,8 @@ set -g theme_newline_prompt '$: '
 set -g theme_display_git_default_branch yes
 set -g theme_use_abbreviated_branch_name yes
 set -g theme_avoid_ambiguous_glyphs yes
-set -g theme_display_k8s_context no
-set -g theme_display_k8s_namespace no
+set -g theme_display_k8s_context yes
+set -g theme_display_k8s_namespace yes
 set -g theme_display_vagrant yes
 ## == End - Bob The fish settings ==
 

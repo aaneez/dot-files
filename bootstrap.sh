@@ -33,4 +33,11 @@ install_powerline_z() {
     echo ZSH_THEME="powerlevel10k/powerlevel10k" >> ~/.zshrc
 }
 
+install_oc(){
+	git clone https://github.com/chmouel/oh-my-zsh-openshift ~/.oh-my-zsh/custom/plugins/oc
+	echo typeset -U fpath;fpath=(~/.zsh/oc $fpath);autoload -U compinit;compinit -i >> $HOME/.zshrc
+}
+
+
+
 install_direnv
