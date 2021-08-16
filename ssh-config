@@ -1,0 +1,38 @@
+Host *
+     ForwardAgent no
+     ForwardX11 no
+     ForwardX11Trusted yes
+     User nixcraft
+     Port 22
+     Protocol 2
+     ServerAliveInterval 60
+     ServerAliveCountMax 30
+
+
+Host testme
+    Hostname gitme.com
+    User myuser
+    LogLevel ERROR
+    IdentityFile ~/.ssh/id_rsa
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+    ProxyCommand ssh -W %h:%p  gateway
+    ProxyCommand ssh user@bastion -W %h:%p
+    ProxyCommand ssh user@bastion nc %h %p 2> /dev/null
+
+Host gateway
+   Hostname myhost
+   User ubuntu
+   IdentityFile ~/.ssh/xyz.pem
+   ControlMaster auto
+   StrictHostKeyChecking no
+   ControlPath ~/.ssh/ansible-%r@%h:%p
+   ControlPersist 5m
+   UserKnownHostsFile /dev/null
+
+#ssh -f -N tunnel
+Host tunnel
+    HostName database.example.com
+    IdentityFile ~/.ssh/coolio.example.key
+    LocalForward 9906 127.0.0.1:3306
+    User coolio
